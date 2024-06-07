@@ -1,10 +1,8 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-package com.valentinat.recordatorio;
+package apuntes_basicos_consola;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 /**
