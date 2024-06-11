@@ -1,30 +1,6 @@
 import java.util.Scanner;
 
 public class CalculadoraEstructurada {
-    
-    // Función para sumar
-    public static double sumar(double a, double b) {
-        return a + b;
-    }
-
-    // Función para restar
-    public static double restar(double a, double b) {
-        return a - b;
-    }
-
-    // Función para multiplicar
-    public static double multiplicar(double a, double b) {
-        return a * b;
-    }
-
-    // Función para dividir
-    public static double dividir(double a, double b) {
-        if (b == 0) {
-            System.out.println("Error: No se puede dividir por cero.");
-            return 0;
-        }
-        return a / b;
-    }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -56,28 +32,52 @@ public class CalculadoraEstructurada {
             double resultado = 0;
 
             switch (opcion) {
-                case 1:
+                case 1 -> {
                     resultado = sumar(num1, num2);
                     System.out.println("Resultado: " + resultado);
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     resultado = restar(num1, num2);
                     System.out.println("Resultado: " + resultado);
-                    break;
-                case 3:
+                }
+                case 3 -> {
                     resultado = multiplicar(num1, num2);
                     System.out.println("Resultado: " + resultado);
-                    break;
-                case 4:
+                }
+                case 4 -> {
                     resultado = dividir(num1, num2);
                     System.out.println("Resultado: " + resultado);
-                    break;
-                default:
+                }
+                default-> {
                     System.out.println("Opción no válida. Intente de nuevo.");
-                    break;
+                }
             }
         }
 
         scanner.close();
     }
+
+        // Función para sumar
+        public static double sumar(double a, double b) {
+            return a + b;
+        }
+    
+        // Función para restar
+        public static double restar(double a, double b) {
+            return a - b;
+        }
+    
+        // Función para multiplicar
+        public static double multiplicar(double a, double b) {
+            return a * b;
+        }
+    
+        // Función para dividir
+        public static double dividir(double a, double b) {
+            if (b == 0) {
+                System.out.println("Error: No se puede dividir por cero.");
+                return 0;
+            }
+            return a / b;
+        }
 }

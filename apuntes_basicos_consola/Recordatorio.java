@@ -73,11 +73,13 @@ public class Recordatorio {
             // logicas
         }
 
-        // La estructura switch es un homólogo más legible y ordenado de los if compuestos que solo requieren una comparación por igualdad
+        // La estructura switch es un homólogo más legible y ordenado de los if
+        // compuestos que solo requieren una comparación por igualdad
         // Tiene una variable de la que dependen los casos
         // Puede tener cuantos casos sean necesarios
         // No soporta expresiones lógicas
-        // Cada caso se compara con la variable del switch, si es igual (==) se ejecuta el código del caso
+        // Cada caso se compara con la variable del switch, si es igual (==) se ejecuta
+        // el código del caso
         // Hay un caso default que sería equivalente al else de un if
         switch (cadena) {
             case "Julian": {
@@ -129,5 +131,21 @@ public class Recordatorio {
         System.out.println(cadena);
         System.out.println("El valor de la variable cadena es: " + cadena);
 
+        // Invocación de metodo con retorno
+        int valorRetorno = suma(20, 30);
+        mostrarMensaje("El resultado fue calculado.");
     }
+
+    // Ejemplo de un metodo que no retorna nada
+    private static void mostrarMensaje(String mensaje) {
+        System.out.println(mensaje);
+    }
+
+    private static int suma(int numero1, int numero2) {
+
+        int resultado = numero1 + numero2;
+
+        return resultado;
+    }
+
 }
