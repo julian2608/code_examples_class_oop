@@ -1,4 +1,4 @@
-package ejemplo_POO;
+package clase_POO.ejemplo_POO;
 
 class Resta extends Operacion {
     public Resta(double numero1, double numero2) {

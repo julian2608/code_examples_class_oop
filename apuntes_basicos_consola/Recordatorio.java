@@ -141,6 +141,7 @@ public class Recordatorio {
         System.out.println(mensaje);
     }
 
+    //Ejemplo método con varios parametros y que retorna un valor int
     private static int suma(int numero1, int numero2) {
 
         int resultado = numero1 + numero2;

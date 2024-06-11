@@ -1,4 +1,4 @@
-package ejemplo_POO;
+package clase_POO.ejemplo_POO;
 
 class Division extends Operacion {
     public Division(double numero1, double numero2) {
