@@ -1,4 +1,4 @@
-package clase_POO.ejemplos_code;
+package clase_POO.ejemplos_code.ejemplos_sin_constructor;
 
 public class Persona {
     String nombres;
@@ -10,19 +10,6 @@ public class Persona {
     int celular;
     String direccion;
     String ciudad;
-
-    public Persona(String nombres, String apellidos, String tipoDocumento, int numeroIdentificacion, int estatura,
-            int edad, int celular, String direccion, String ciudad) {
-        this.nombres = nombres;
-        this.apellidos = apellidos;
-        this.tipoDocumento = tipoDocumento;
-        this.numeroIdentificacion = numeroIdentificacion;
-        this.estatura = estatura;
-        this.edad = edad;
-        this.celular = celular;
-        this.direccion = direccion;
-        this.ciudad = ciudad;
-    }
 
     public String nombreCompleto() {
         return nombres + apellidos;
