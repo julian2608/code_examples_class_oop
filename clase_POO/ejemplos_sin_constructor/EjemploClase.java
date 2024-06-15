@@ -1,4 +1,4 @@
-package clase_POO.ejemplos_code.ejemplos_sin_constructor;
+package clase_POO.ejemplos_sin_constructor;
 
 public class EjemploClase {
 
