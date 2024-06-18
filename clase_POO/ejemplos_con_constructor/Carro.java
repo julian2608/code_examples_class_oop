@@ -6,9 +6,10 @@ public class Carro {
     private String color;
     private int modelo;
     private int cilindraje;
-    
-    // Constructor sin parametros ó vacio 
-    public Carro () {}
+
+    // Constructor sin parametros ó vacio
+    public Carro() {
+    }
 
     // Constructor con parametros
     public Carro(String marca, String color, int modelo, int cilindraje) {
@@ -18,6 +19,11 @@ public class Carro {
         this.cilindraje = cilindraje;
     }
 
+    // Constructor sobrecargado
+    public Carro(String marca, String color) {
+        this.marca = marca;
+        this.color = color;
+    }
 
     // Métodos de comportamiento
     public void encender() {
@@ -29,7 +35,8 @@ public class Carro {
     }
 
     public void mostrarInfo() {
-        System.out.println("Marca: " + marca + ", Modelo: " + modelo + ", Color: " + color + ", Cilindraje: " + cilindraje);
+        System.out.println(
+                "Marca: " + marca + ", Modelo: " + modelo + ", Color: " + color + ", Cilindraje: " + cilindraje);
     }
 
     // Métodos accesores getters y setters
@@ -64,6 +71,5 @@ public class Carro {
     public void setCilindraje(int cilindraje) {
         this.cilindraje = cilindraje;
     }
-
 
 }
