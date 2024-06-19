@@ -1,5 +1,7 @@
 package clase_POO.account_bank;
 
+import java.util.Timer;
+
 public class MessageUtil {
 
     public static void showOptions(String headline) {
@@ -28,10 +30,11 @@ public class MessageUtil {
     }
 
     public static void accountCreated() {
-        System.out.println("Cuenta creada con exito !");
         System.out.print("\n \n");
-
-
+        System.out.println("----------SUCCESS---------");
+        System.out.println("| Cuenta creada con exito |");
+        System.out.println("|_________________________|");
+        System.out.print("\n \n");
     }
 
     public static void ammountOperation() {
@@ -39,67 +42,98 @@ public class MessageUtil {
     }
 
     public static void operationDeposit() {
-        System.out.println("Ejecutando operación de deposito...");
+        System.out.print("\n \n");
+
+        System.out.print("Ejecutando operación de deposito");
 
         messageWaiting();
     }
 
     public static void operationWithdraw() {
-        System.out.println("Ejecutando operación de retiro...");
+        System.out.print("\n \n");
+
+        System.out.print("Ejecutando operación de retiro");
 
         messageWaiting();
     }
 
     public static void operationViewBalance(String headline) {
-        System.out.println("Consultando el balance de cuenta de: " + headline + "...");
+        System.out.print("\n \n");
+
+        System.out.print("Consultando el balance de cuenta de: " + headline);
 
         messageWaiting();
     }
 
     public static void operationClose() {
-        System.out.println("Cerrando su cuenta y dejando sus datos a salvo...");
+        System.out.print("\n \n");
+
+        System.out.print("Cerrando su cuenta y dejando sus datos a salvo");
 
         messageWaiting();
     }
 
     public static void showBalance(double balance) {
-        System.out.println("El balance de su cuenta es: $" + balance);
+        System.out.print("\n \n");
+        System.out.println("--------------SUCCESS------------");
+        System.out.println("|El balance de su cuenta es: $" + balance );
+        System.out.println("|________________________________");
+        System.out.print("\n \n");
     }
 
     private static void messageWaiting() {
-        for (int i = 0; i <= 40; i++) {
+        for (int i = 0; i <= 15; i++) {
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             System.out.print(".");
         }
         System.out.print("\n \n");
     }
 
     public static void fundsInsufficient() {
-        System.out.println("Fondos insuficientes para ejecutar la operación !");
+        System.out.println("----------------------WARNING----------------------");
+        System.out.println("| Fondos insuficientes para ejecutar la operación |");
+        System.out.println("|_________________________________________________|");
         System.out.print("\n \n");
     }
 
     public static void operationSuccess() {
-        System.out.println("Operación realizada con exíto !");
+        System.out.println("--------------SUCCESS------------");
+        System.out.println("| Operación realizada con exíto |");
+        System.out.println("|_______________________________|");
+
         System.out.print("\n \n");
     }
 
     public static void closeApp() {
-        System.out.println("Saliendo de la app... fue un placer servirte !");
+        System.out.println("----------SUCCESS---------");
+        System.out.println("| Fue un placer servirte |");
+        System.out.println("|________________________|");
         System.out.print("\n \n");
     }
 
     public static void operationCancel() {
-        System.out.println("Error: Operación cancelada !");
+        System.out.println("---------ERROR---------");
+        System.out.println("| Operación cancelada |");
+        System.out.println("|_____________________|");
         System.out.print("\n \n");
     }
 
     public static void operationNotValid() {
-        System.out.println("Opción no válida, digite una opción válida.");
+        System.out.println(".");
+        System.out.println("----------------------ERROR-------------------");
+        System.out.println("| Opción no válida, digite una opción válida |");
+        System.out.println("|____________________________________________|");
         System.out.print("\n \n");
     }
 
     public static void valueNotValid() {
-        System.out.println("La operación debe ser mayor a 0 !");
+        System.out.println("---------------ERROR---------------");
+        System.out.println("| La operación debe ser mayor a 0 |");
+        System.out.println("|_________________________________|");
         System.out.print("\n \n");
 
     }
