@@ -20,47 +20,47 @@ public class OptionsAccount {
      - 3 operación cancelada
      - 4 si la operación no es reconocida
     */
-    public int execute (){
+    public OperationStatus execute (){
         switch (this.option) {
             case 1 -> {
                 MessageUtil.operationDeposit();
 
                 if (valueOperation < 0){
                     MessageUtil.valueNotValid();
-                    return 3;
+                    return OperationStatus.OPERATION_FAILED;
                 }
 
                 accountBank.deposit(valueOperation);
 
-                return 1;
+                return OperationStatus.OPERATION_SUCCESS;
             }
             case 2 -> {
                 MessageUtil.operationWithdraw();
 
                 if (valueOperation > accountBank.getBalance()){
                     MessageUtil.fundsInsufficient();
-                    return 3;
+                    return OperationStatus.OPERATION_FAILED;
                 }
 
                 accountBank.withdraw(valueOperation);
                 
-                return 1;
+                return OperationStatus.OPERATION_SUCCESS;
             }
             case 3 -> {
                 MessageUtil.operationViewBalance(accountBank.getHeadline());
 
                 MessageUtil.showBalance(accountBank.getBalance());
 
-                return 1;
+                return OperationStatus.OPERATION_SUCCESS;
             }
             case 4 -> {
                 MessageUtil.operationClose();
 
-                return 2;
+                return OperationStatus.CLOSE;
 
             }
             default -> {
-                return 3;
+                return OperationStatus.OPERATION_NOT_VALID;
             }
         }
     }

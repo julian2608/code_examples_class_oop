@@ -12,6 +12,11 @@ public class Estudiante extends Persona {
         this.notas = notas;
     }
 
+    @Override
+    public void mostrarInfo () {
+        System.out.println("No quiero mostrar info persona");
+    }
+
     public void calcularPromedio (){
         int promedio = 0;
         for (int i = 0; i <= notas.length; i++){

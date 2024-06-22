@@ -7,11 +7,11 @@ public class Main {
     public static void main(String[] args) {
         int optionSelected;
         Scanner scan = new Scanner(System.in);
-        int result = 0;
+        OperationStatus result = null;
         double ammountOperation = 0;
         AccountBank accountBank = null;
 
-        while (result != 2) {
+        while (result != OperationStatus.CLOSE) {
             if (accountBank == null) {
                 MessageUtil.showRequerimentsForAccount();
 
@@ -21,40 +21,38 @@ public class Main {
 
                 MessageUtil.accountCreated();
 
-            } else {
-                MessageUtil.showOptions(accountBank.getHeadline());
+            }
+            MessageUtil.showOptions(accountBank.getHeadline());
 
-                optionSelected = scan.nextInt();
+            optionSelected = scan.nextInt();
 
-                if (optionSelected == 1 || optionSelected == 2) {
+            if (optionSelected == 1 || optionSelected == 2) {
 
-                    MessageUtil.ammountOperation();
+                MessageUtil.ammountOperation();
 
-                    ammountOperation = scan.nextDouble();
+                ammountOperation = scan.nextDouble();
 
-                }
-
-                OptionsAccount option = new OptionsAccount(optionSelected, accountBank, ammountOperation);
-
-                result = option.execute();
-
-                switch (result) {
-                    case 1 -> {
-                        MessageUtil.operationSuccess();
-                    }
-                    case 2 -> {
-                        MessageUtil.closeApp();
-                        break;
-                    }
-                    case 3 -> {
-                        MessageUtil.operationCancel();
-                    }
-                    case 4 -> {
-                        MessageUtil.operationNotValid();
-                    }
-                }
             }
 
+            OptionsAccount option = new OptionsAccount(optionSelected, accountBank, ammountOperation);
+
+            result = option.execute();
+
+            switch (result) {
+                case OPERATION_SUCCESS -> {
+                    MessageUtil.operationSuccess();
+                }
+                case CLOSE -> {
+                    MessageUtil.closeApp();
+                    break;
+                }
+                case OPERATION_FAILED -> {
+                    MessageUtil.operationCancel();
+                }
+                case OPERATION_NOT_VALID -> {
+                    MessageUtil.operationNotValid();
+                }
+            }
         }
 
     }
