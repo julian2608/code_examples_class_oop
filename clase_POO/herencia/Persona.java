@@ -12,7 +12,7 @@ public class Persona {
     }
 
     public void mostrarInfo () {
-        System.out.println(String.format("Los datos basicos de la persona son, nombre: %s, edad: %s, cedula: %s.", this.nombre, this.edad, this.cedula));
+        System.out.print(String.format("Los datos basicos de la persona son, nombre: %s, edad: %s, cedula: %s", this.nombre, this.edad, this.cedula));
     }
 
     public String getNombre() {

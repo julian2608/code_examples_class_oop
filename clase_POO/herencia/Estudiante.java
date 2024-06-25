@@ -14,7 +14,8 @@ public class Estudiante extends Persona {
 
     @Override
     public void mostrarInfo () {
-        System.out.println("No quiero mostrar info persona");
+        super.mostrarInfo();
+        System.out.println(String.format(", carrera: %s, semestre: %s, notas: %s.", this.carrera, this.semestre, this.notas));
     }
 
     public void calcularPromedio (){

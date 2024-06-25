@@ -84,7 +84,7 @@ public class MessageUtil {
     private static void messageWaiting() {
         for (int i = 0; i <= 15; i++) {
             try {
-                Thread.sleep(200);
+                Thread.sleep(50);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
