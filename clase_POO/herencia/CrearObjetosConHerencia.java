@@ -1,5 +1,7 @@
 package clase_POO.herencia;
 
+import java.util.Scanner;
+
 public class CrearObjetosConHerencia {
 
     public static void main(String[] args) {
@@ -7,7 +9,7 @@ public class CrearObjetosConHerencia {
 
         Estudiante estudiante = new Estudiante("Camilo temprano", 18, 1234567, "Ing En Dormir", 5, notas);
     
-        estudiante.mostrarInfo();
+        estudiante.mostrarInfo();        
     }
     
 }
